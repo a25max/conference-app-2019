@@ -19,6 +19,21 @@
         android:background="?selectableItemBackground"
         >
 
+        <TextView
+            android:id="@+id/section_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="23dp"
+            android:textColor="@color/gray1"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/speaker_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/speaker_label"
+            />
+
         <ImageView
             android:id="@+id/speaker_image"
             android:layout_width="64dp"
@@ -31,7 +46,6 @@
             app:imageUrl="@{speaker.imageUrl}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:placeHolder="@{@drawable/ic_person_outline_black_24dp}"
             app:placeHolderTint="@{@color/gray2}"
             />
