@@ -1,5 +1,6 @@
 package io.github.droidkaigi.confsched2019.session.ui.item
 
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
@@ -31,6 +32,13 @@ class SpeakerItem @AssistedInject constructor(
     override fun bind(itemBinding: ItemSpeakerBinding, position: Int) {
         itemBinding.speaker = speaker
         val context = itemBinding.speakerImage.context
+
+        itemBinding.sectionTitle.visibility =
+            if (position == 0) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
         val placeHolderColor = ContextCompat.getColor(
             context,
             R.color.gray2
